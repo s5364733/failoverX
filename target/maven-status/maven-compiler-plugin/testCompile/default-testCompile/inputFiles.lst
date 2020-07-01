@@ -1,0 +1,6 @@
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/RestAsStringGetTest.java
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/MockServer.java
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/FailoverCreatorTest.java
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/FailsafeFactory.java
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/FailoverRegisterAsyncTest.java
+/usr/local/work/failover-safe/src/test/java/BehaviorTests/get/BddTest.java
