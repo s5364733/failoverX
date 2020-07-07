@@ -6,9 +6,9 @@ Super lightweight auxiliary fault-tolerance tool, almost keep 0 dependencies ，
 
 
 ### Technology<br/>
-- spark microservice framework
-- unirest http client
-- failsafe No dependency package plugin
+- Use spark as a microservice embedded web engine, with zero dependencies, small, concise, easy to deploy and other advantages
+- Using unirest as a rest client, with high performance, fully asynchronous operation, rich data analysis and Tls operation, simple use and other characteristics
+- Use failsafe as the bottom package to provide fault-tolerant processing in various modes, with small, flexible and rich features
 
 ### example:<br/>
 ```

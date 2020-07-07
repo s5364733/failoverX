@@ -46,8 +46,8 @@ public abstract class AbstractFailoverPolicy<S, R, U> implements Collect<List<Po
     Logger logger = Logger.getGlobal();
     protected List<Policy<R>> policyCollects = new ArrayList<>();
     protected RetryPolicy retryPolicy;
-    protected SafeFallback safeFallback;
-    protected MinaFallback fallback;
+    protected SafeFailback safeFailback;
+    protected MinaFallback minaFallback;
 
     abstract List<Policy<R>> doCollect(Policy<R>... t);
 
@@ -93,7 +93,7 @@ public abstract class AbstractFailoverPolicy<S, R, U> implements Collect<List<Po
      */
     protected CompletableFuture<S> registerFailoverHandlerMethodAsync(
             @NotNull CheckedSupplier<U> method) {
-        return this.safeFallback.doRenderAsync(method, policyCollects.toArray(new Policy[policyCollects.size()]));
+        return this.safeFailback.doRenderAsync(method, policyCollects.toArray(new Policy[policyCollects.size()]));
     }
 
 
@@ -103,7 +103,7 @@ public abstract class AbstractFailoverPolicy<S, R, U> implements Collect<List<Po
      */
     protected CompletableFuture<S> registerFailoverHandlerMethodSync(
             @NotNull CheckedSupplier<U> method) throws Exception {
-        return this.safeFallback.doRenderSync(method, policyCollects.toArray(new Policy[policyCollects.size()]));
+        return this.safeFailback.doRenderSync(method, policyCollects.toArray(new Policy[policyCollects.size()]));
     }
 
 

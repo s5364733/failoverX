@@ -27,8 +27,13 @@
 package BehaviorTests.get;
 
 import com.creatorchina.core.FailoverCreator;
+import com.creatorchina.core.InitialFallbackException;
 import kong.unirest.HttpResponse;
+import kong.unirest.RawResponseBase;
 import kong.unirest.Unirest;
+import net.jodah.failsafe.Fallback;
+import net.jodah.failsafe.event.ExecutionAttemptedEvent;
+import net.jodah.failsafe.function.CheckedFunction;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -58,7 +63,7 @@ public class FailoverCreatorTest {
         CompletableFuture<HttpResponse> future = FailoverCreator.defaultFailover((e) -> System.out.println("onFailedAttempt"),
                 () -> Unirest.get(DEFAULT).asString(), null);
 
-        if (future == null){
+        if (future != null && (future.get() == null)){
             System.out.println("null");
             return;
         }
@@ -74,10 +79,56 @@ public class FailoverCreatorTest {
                 FailoverCreator.defaultFailover((e) -> System.out.println("onFailedAttempt"),
                 () -> Unirest.get(DEFAULT).asString(),Boolean.TRUE);
 
-        if (future == null){
+        if (future != null && (future.get() == null)){
             System.out.println("null");
             return;
         }
         Assert.assertEquals(future.get().getBody(),"register");
+    }
+
+
+    @Test
+    public void failoverCreatorForCustomResult() throws Exception {
+        Unirest.config().socketTimeout(2000);
+        Unirest.config().connectTimeout(2000);
+        CompletableFuture<HttpResponse> future =
+                FailoverCreator.customizeResultFailover((e) -> System.out.println("onFailedAttempt"),
+                        () -> Unirest.get(DEFAULT).asString(),new Result(200),Boolean.TRUE);
+
+        Assert.assertNotNull(future);
+        Assert.assertNotNull(future.get());
+        Assert.assertEquals(((Result)future.get()).getCode().intValue(),200);
+
+    }
+
+    @Test
+    public void failoverCreatorForCustomException() throws Exception {
+        Unirest.config().socketTimeout(2000);
+        Unirest.config().connectTimeout(2000);
+        CompletableFuture<HttpResponse> future =
+                FailoverCreator.customizeFunctionFailover((e) -> System.out.println("onFailedAttempt"),
+                        () -> Unirest.get(DEFAULT).asString(), o -> new InitialFallbackException() , Boolean.TRUE);
+
+        Assert.assertNotNull(future);
+        Assert.assertNotNull(future.get());
+        Assert.assertEquals(((InitialFallbackException)future.get()).getClass(),InitialFallbackException.class);
+
+    }
+
+
+    class Result {
+        Integer code;
+
+        public Result(Integer code) {
+            this.code = code;
+        }
+
+        public Integer getCode() {
+            return code;
+        }
+
+        public void setCode(Integer code) {
+            this.code = code;
+        }
     }
 }

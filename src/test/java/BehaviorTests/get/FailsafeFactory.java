@@ -78,7 +78,19 @@ public class FailsafeFactory<S> {
                 ///*阻塞获得结果*/.get()
     }
 
+    public CompletableFuture<S> createDefaultPolicyException(CheckedSupplier<S> method){
+        RetryPolicy retryPolicy = new RetryPolicy();
+        retryPolicy
+                .onFailedAttempt((e) -> System.out.println("onFailedAttempt")).
+                withBackoff(Constants.WITH_BACKOFF_DELAY,
+                        Constants.WITH_BACKOFF_MAX_DELAY,
+                        Constants.CHRONOUNIT_MILLIS).onFailure((e) -> System.out.println("onFailure"));
 
+        /*Customizing broker*/
+        return Failsafe.with(retryPolicy).
+                with(executorService).getAsync(method);
+        ///*阻塞获得结果*/.get()
+    }
 
     public CompletableFuture<S>  createDefaultPolicyAbort(CheckedSupplier<S> method){
         RetryPolicy retryPolicy = new RetryPolicy();

@@ -5,13 +5,12 @@
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/core/Collect.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/core/AbstractFailoverPolicy.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/core/MinaFallback.java
+/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/SafeFailback.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/util/NotNull.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/json/JSONUtil.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/util/StrKit.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/core/FailoverCreator.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/core/Failover.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/preview/Constants.java
-/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/CircuitBreakerRegistry.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/json/CharTypes.java
 /usr/local/work/failover-safe/src/main/java/com/creatorchina/json/JSONWriter.java
-/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/SafeFallback.java

@@ -28,10 +28,12 @@ package BehaviorTests.get;
 import kong.unirest.HttpResponse;
 import kong.unirest.StringResponse;
 import kong.unirest.Unirest;
+import kong.unirest.UnirestException;
 import org.junit.Assert;
 import org.junit.Test;
 import spark.Spark;
 import java.net.ConnectException;
+import java.net.SocketTimeoutException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
@@ -91,6 +93,23 @@ public class RestAsStringGetTest extends  BddTest{
 //        assertEquals(o.getBody(), "Hello World");
     }
 
+
+    @Test
+    public void testCreateDefaultPolicyException() {
+        Unirest.config().connectTimeout(2000);
+        Unirest.config().socketTimeout(2000);
+        CompletableFuture<HttpResponse> defaultPolicy = failsafeFactory.createDefaultPolicyException(() -> Unirest.get(EXCEPTION).asString());
+        HttpResponse o = null;
+        try {
+            o = defaultPolicy.get();
+        } catch (Exception e) {
+            if (e instanceof ExecutionException &&
+                    e.getCause() instanceof UnirestException &&
+                    e.getCause().getCause() instanceof  SocketTimeoutException){
+                    Assert.assertEquals(e.getCause().getCause().getClass(),SocketTimeoutException.class);
+            }
+        }
+    }
 
     @Test
     public void testFailsafeFactoryTimeout() throws ExecutionException, InterruptedException {

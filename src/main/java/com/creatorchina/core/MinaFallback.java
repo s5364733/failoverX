@@ -1,8 +1,8 @@
 /**
  * The MIT License
- *
+ * <p>
  * Copyright for portions of failover-safe are held by creatorchina Inc (c) 2020.
- *
+ * <p>
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -10,10 +10,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- *
+ * <p>
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- *
+ * <p>
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -29,6 +29,9 @@ package com.creatorchina.core;
 import com.creatorchina.util.NotNull;
 import net.jodah.failsafe.Fallback;
 import net.jodah.failsafe.function.CheckedConsumer;
+import net.jodah.failsafe.function.CheckedFunction;
+import net.jodah.failsafe.function.CheckedRunnable;
+import net.jodah.failsafe.function.CheckedSupplier;
 import net.jodah.failsafe.internal.util.Assert;
 
 import java.util.Optional;
@@ -40,36 +43,34 @@ import java.util.function.Predicate;
  * @Author: jack.liang
  * @Date: 2020/6/29 下午9:16
  **/
-public class MinaFallback<R> {
+final public class MinaFallback<R> {
 
-    private MinaFallback() {//Ignore constructor initializing
+    private Optional<Fallback> fallback;
+
+    static <T, R> CheckedFunction<T, R> toFn(CheckedSupplier<R> supplier) {
+        return (t) -> supplier.get();
     }
 
-    private static Optional<MinaFallback> MINA_FALLBACK = Optional.empty();
+    private MinaFallback(CheckedFunction supplier) {//Ignore constructor initializing
+        fallback = Optional.of(Fallback.of(supplier));
+    }
 
-    private static final Object lock = new Object();
-
-    public static Optional<Fallback> fallback = Optional.empty();
-
-
-    public Fallback getDefaultFallback(){
-        return fallback.orElseGet(null);
+    public Fallback<R> fetchFallback() {
+        return fallback.orElseThrow(() -> new InitialFallbackException(
+                MinaFallback.class.getName() +
+                        "\t Current fallback is not null"));
     }
 
 
-    public static Optional<MinaFallback> triggerInitializeFallback() {
-        if (!MINA_FALLBACK.isPresent()) {
-            synchronized (lock) {
-                if (!MINA_FALLBACK.isPresent()) {
-                    MINA_FALLBACK = Optional.of(new MinaFallback());
-                    if (!fallback.isPresent()) {
-                        fallback = Optional.of(Fallback.of(() -> null));
-                    }
-                }
-            }
-        }
-        return MINA_FALLBACK;
+    public static <R> MinaFallback of(CheckedSupplier<? extends R> checkedSupplier) {
+        return new MinaFallback(toFn(checkedSupplier));
     }
+
+
+    public static <T, R> MinaFallback ofException(CheckedFunction<T, R> checkedSupplier) {
+        return new MinaFallback(checkedSupplier);
+    }
+
 
     /**
      * <BR><P>determine which execution results or failures to handle and how to handle them. By default,
@@ -102,10 +103,11 @@ public class MinaFallback<R> {
     /**
      * <PRE>fallback.onFailure(e -> log.error("Failed to connect to backup", e.getFailure()));<PRE/>
      * <BR>When the fallback attempt failed:
-      * @see #onFailure(CheckedConsumer)
+     *
      * @param
      * @return MinaFallback
      * <BR/>
+     * @see #onFailure(CheckedConsumer)
      */
     public MinaFallback onFailure(@NotNull CheckedConsumer listener) {
         Assert.notNull(fallback, "Current fallback is non null~~");
@@ -114,7 +116,7 @@ public class MinaFallback<R> {
     }
 
     /**
-     * Specify the return result in case of retry failure
+     * <BR>Specify the return result in case of retry failure<BR/>
      * <pre>
      * policy
      *   .handleResult(null)
@@ -133,6 +135,7 @@ public class MinaFallback<R> {
     /**
      * <BR>They can also be configured to handle specific results or result conditions:<BR/>
      * <p>Trigger fallback when the condition is resolved<p/>
+     *
      * @param resultPredicate Condition for trigger
      * @return
      */

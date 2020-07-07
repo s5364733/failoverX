@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/util/Utils.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/util/NotNull.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="30" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/util/StrKit.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/FailoverRegister.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="37" severity="warning" message="Extra separation in import group before &apos;java.time.Duration&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="37" severity="warning" message="Wrong lexicographical order for &apos;java.time.Duration&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="38" severity="warning" message="Wrong lexicographical order for &apos;java.time.temporal.ChronoUnit&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="39" severity="warning" message="Wrong lexicographical order for &apos;java.util.Arrays&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="40" severity="warning" message="Wrong lexicographical order for &apos;java.util.List&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="41" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.*&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="42" severity="warning" message="Wrong lexicographical order for &apos;java.util.function.Predicate&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="46" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="71" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="82" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="82" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="101" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="115" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="138" severity="warning" message="Javadoc comment at column 0 has parse error. Details: no viable alternative at input &apos;     *&apos; while parsing JAVADOC_TAG" source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="153" severity="warning" message="Javadoc comment at column 47 has parse error. Missed HTML close tag &apos;ExecutionAttemptedEvent&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="169" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="179" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="191" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="194" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="214" severity="warning" message="Javadoc comment at column 21 has parse error. Missed HTML close tag &apos;Strong&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="227" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="241" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="261" severity="warning" message="&lt;p&gt; tag should be placed immediately before the first word, with no space after." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="261" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="283" severity="warning" message="&lt;p&gt; tag should be placed immediately before the first word, with no space after." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="283" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="300" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="309" severity="warning" message="&apos;method def&apos; child has incorrect indentation level 6, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/MinaFallback.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="37" severity="warning" message="Extra separation in import group before &apos;java.util.Optional&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="37" severity="warning" message="Wrong lexicographical order for &apos;java.util.Optional&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="38" severity="warning" message="Wrong lexicographical order for &apos;java.util.function.Predicate&apos; import. Should be before &apos;net.jodah.failsafe.internal.util.Assert&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="40" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="61" column="46" severity="warning" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+<error line="77" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="79" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="92" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="93" severity="warning" message="Redundant &lt;p&gt; tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="95" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="105" severity="warning" message="Javadoc comment at column 95 has parse error. Missed HTML close tag &apos;PRE&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="125" severity="warning" message="Javadoc comment at column 12 has parse error. Missed HTML close tag &apos;pre&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="136" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="138" severity="warning" message="&lt;p&gt; tag should be preceded with an empty line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/Collect.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="29" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="35" column="26" severity="warning" message="Interface type name &apos;docker&apos; must match pattern &apos;(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.InterfaceTypeParameterNameCheck"/>
+<error line="35" column="33" severity="warning" message="Interface type name &apos;item&apos; must match pattern &apos;(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.InterfaceTypeParameterNameCheck"/>
+<error line="37" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="39" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/SafeFailback.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="33" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.CompletableFuture&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="34" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.ExecutionException&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="35" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.ExecutorService&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="36" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.TimeUnit&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="37" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.atomic.AtomicBoolean&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="38" severity="warning" message="Wrong lexicographical order for &apos;java.util.logging.Level&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="39" severity="warning" message="Wrong lexicographical order for &apos;java.util.logging.Logger&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="41" severity="warning" message="Import statement for &apos;java.util.concurrent.Executors.*&apos; is in the wrong order. Should be in the &apos;STATIC&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="43" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="76" severity="warning" message="Javadoc comment at column 33 has parse error. Missed HTML close tag &apos;S&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="90" severity="warning" message="Javadoc comment at column 33 has parse error. Missed HTML close tag &apos;S&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="98" column="63" severity="warning" message="&apos;;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/FailoverCreator.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="33" severity="warning" message="Extra separation in import group before &apos;java.time.Duration&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="33" severity="warning" message="Wrong lexicographical order for &apos;java.time.Duration&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="34" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.CompletableFuture&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="36" severity="warning" message="Import statement for &apos;com.creatorchina.preview.Constants.DELAY_RETRY&apos; is in the wrong order. Should be in the &apos;STATIC&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="37" severity="warning" message="Import statement for &apos;com.creatorchina.preview.Constants.WITH_MAX_ATTEMPTS&apos; is in the wrong order. Should be in the &apos;STATIC&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="40" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="41" severity="warning" message="Redundant &lt;p&gt; tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="82" severity="warning" message="Javadoc comment at column 8 has parse error. Missed HTML close tag &apos;code&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+<error line="117" severity="warning" message="Javadoc comment at column 0 has parse error. Details: no viable alternative at input &apos;     *&apos; while parsing JAVADOC_TAG" source="com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/AbstractFailoverPolicy.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="33" severity="warning" message="Wrong lexicographical order for &apos;java.util.*&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="34" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.CompletableFuture&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="35" severity="warning" message="Wrong lexicographical order for &apos;java.util.logging.Level&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="36" severity="warning" message="Wrong lexicographical order for &apos;java.util.logging.Logger&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="38" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="54" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="56" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="59" column="26" severity="warning" message="Method name &apos;registerFailoverHandler$&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9_]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="77" severity="warning" message="&apos;method def&apos; child has incorrect indentation level 7, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="90" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="91" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="100" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="101" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/InitialFallbackException.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="28" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/core/Failover.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="32" severity="warning" message="Extra separation in import group before &apos;java.util.concurrent.CompletableFuture&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="32" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.CompletableFuture&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="33" severity="warning" message="Wrong lexicographical order for &apos;java.util.concurrent.ExecutionException&apos; import. Should be before &apos;net.jodah.failsafe.function.CheckedSupplier&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="35" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="43" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="46" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="47" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="52" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="55" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="56" severity="warning" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/preview/Constants.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="30" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/json/JSONWriter.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="31" severity="warning" message="Extra separation in import group before &apos;java.text.SimpleDateFormat&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="31" severity="warning" message="Wrong lexicographical order for &apos;java.text.SimpleDateFormat&apos; import. Should be before &apos;net.jodah.failsafe.Policy&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="32" severity="warning" message="Wrong lexicographical order for &apos;java.util.*&apos; import. Should be before &apos;net.jodah.failsafe.Policy&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="34" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/json/CharTypes.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="29" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="102" severity="warning" message="Comment has incorrect indentation level 7, expected is 8, indentation should be the same level as line 106." source="com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/json/JSONParser.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="33" severity="warning" message="Summary javadoc is missing." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+<error line="320" severity="warning" message="Distance between variable &apos;c1&apos; declaration and its first usage is 4, but allowed 3.  Consider making that variable final if you still need to store its value in advance (before method calls that might have side effects on the original value)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
+</file>
+<file name="/usr/local/work/failover-safe/src/main/java/com/creatorchina/json/JSONUtil.java">
+<error line="3" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="5" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="13" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="16" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="28" severity="warning" message="First sentence of Javadoc is missing an ending period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck"/>
+</file>
+</checkstyle>

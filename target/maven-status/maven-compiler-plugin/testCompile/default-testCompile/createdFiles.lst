@@ -1,4 +1,5 @@
 BehaviorTests/get/RestAsStringGetTest.class
+BehaviorTests/get/FailoverCreatorTest$Result.class
 BehaviorTests/get/FailsafeFactory$1.class
 BehaviorTests/get/MockServer.class
 BehaviorTests/get/FailoverRegisterAsyncTest.class

@@ -1,8 +1,8 @@
 /**
  * The MIT License
- *
+ * <p>
  * Copyright for portions of failover-safe are held by creatorchina Inc (c) 2020.
- *
+ * <p>
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -10,10 +10,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- *
+ * <p>
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- *
+ * <p>
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -26,6 +26,7 @@
 package com.creatorchina.core;
 
 import com.creatorchina.util.NotNull;
+import net.jodah.failsafe.Fallback;
 import net.jodah.failsafe.Policy;
 import net.jodah.failsafe.RetryPolicy;
 import net.jodah.failsafe.function.CheckedConsumer;
@@ -41,6 +42,14 @@ import java.util.concurrent.*;
 import java.util.function.Predicate;
 
 /**
+ * <BR>This class is the core component of the entire protocol.<BR/>
+ * <P>The purpose is to encapsulate the basic modules of each component such as
+ * {@link net.jodah.failsafe.Timeout},
+ * {@link net.jodah.failsafe.CircuitBreaker},
+ * {@link net.jodah.failsafe.RetryPolicy},
+ * {@link net.jodah.failsafe.Fallback},etc. The user-defined logic when using it is based on this type.
+ * The default assembly logic will be added to FailoverCreator
+ * <P/>
  * @author jack.liang
  * @date 2020-6-29
  */
@@ -59,18 +68,35 @@ public class FailoverRegister<S, R, U> extends AbstractFailoverPolicy<S, R, U> {
         private static final FailoverRegister FALLBACK_REGISTER_INSTANCE = new FailoverRegister();
     }
 
+    /**
+     * Build default rules and apply default retry processing scenarios
+     * @return
+     */
     public FailoverRegister buildPolicy() {
-        this.retryPolicy = new RetryPolicy();
-        this.safeFallback = new SafeFallback();
-        this.fallback = MinaFallback.triggerInitializeFallback().orElseThrow(() -> new InitialFallbackException());
-        this.collect(fallback.getDefaultFallback(),retryPolicy);
+        this.initialStandardPolicy();
+        this.collect(this.minaFallback.fetchFallback(), retryPolicy);
         return this;
     }
 
-    public FailoverRegister buildFallback() {
-        Assert.notNull(retryPolicy, "Please do not create objects repeatedly");
+
+    /***
+     * Reorganize policy and fallback
+     * @param fallback Need custom failure handling object
+     * @return
+     */
+    public FailoverRegister buildPolicy(MinaFallback fallback) {
+        Assert.notNull(fallback, "Input param for build's fallback is non null...");
+        this.initialStandardPolicy();
+        this.collect(fallback.fetchFallback(), retryPolicy);
         return this;
     }
+
+    private void initialStandardPolicy() {
+        this.retryPolicy = retryPolicy == null ? new RetryPolicy() : retryPolicy;
+        this.safeFailback = safeFailback == null ? new SafeFailback() : safeFailback;
+        this.minaFallback = MinaFallback.of(() -> null);
+    }
+
 
     /**
      * <BR>Only one delay time strategy is currently supported<BR/>
@@ -279,8 +305,8 @@ public class FailoverRegister<S, R, U> extends AbstractFailoverPolicy<S, R, U> {
      *                but returns in a synchronous manner.
      * @return
      */
-    public CompletableFuture<S> assemblyFailover(CheckedSupplier<U> invoke,Boolean isAsync){
-      return this.registerFailoverHandler(invoke, isAsync == null ? false : isAsync);
+    public CompletableFuture<S> assemblyFailover(CheckedSupplier<U> invoke, Boolean isAsync) {
+        return this.registerFailoverHandler(invoke, isAsync == null ? false : isAsync);
     }
 }
 
